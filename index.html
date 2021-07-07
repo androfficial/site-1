@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/vendors.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Touristo</title>
+</head>
+<body>
+	
+<div class="wrapper">
+	<header class="header">
+	<div class="header__container _container">
+		<div class="header__inner">
+			<div class="header__logo">
+				<a class="header__link" href="#">Touristo</a>
+			</div>
+			<div class="header__body">
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a class="menu__link menu__link--small" href="#">Про компанію</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link menu__link--small" href="#">Послуги</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link menu__link--small" href="#">Типові запитання</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link menu__link--small" href="#">Оплата і доставка</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link menu__link--small" href="#">Контакти</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Подорожі</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Розпродаж</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Країни</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Мої подорожі</a>
+							</li>
+						</ul>
+					</nav>	
+				</div>
+				<div class="header__contacts contacts-header">
+					<div class="contacts-header__column">
+						<div class="contacts-header__info info-contacts">
+							<div class="info-contacts__icon">
+								<svg class="_icon-phone">
+									<use xlink:href="img/sprite.svg#phone"></use>
+								</svg>
+								<button class="info-contacts__globe" type="button">
+									<svg class="_icon-globe">
+										<use xlink:href="img/sprite.svg#globe"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="info-contacts__callback">
+								<a class="info-contacts__tel" href="tel:+380509141959">+38 050 914 19 59</a>
+								<button class="info-contacts__request-call" type="button">Замовити дзвінок</button>
+							</div>
+						</div>
+					</div>
+					<div class="contacts-header__column">
+						<a class="header__btn btn btn--blue" href="#">Знайти подорожі</a>
+					</div>
+				</div>
+				<div class="icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+	<main class="page">
+		<section class="page__intro intro">
+			<div class="intro__container _container">
+				<div class="intro__content content-intro">
+					<h1 class="content-intro__title _title-h1U">Куди відправимось?</h1>
+					<div class="content-intro__text _title-h4">Ви можете здійснити пошук по декільком напр’ямкам одночасно</div>
+
+					<form action="#" class="content-intro__form form-content">
+
+						<div class="form-content__top top-form-content">
+							<button class="top-form-content__search" type="submit">
+								<svg class="_icon-search">
+									<use xlink:href="img/sprite.svg#search"></use>
+								</svg>
+							</button>
+							<input class="top-form-content__input input" type="text" placeholder="Країна, місто, регіон, готель">
+						</div>
+						
+						<div class="form-content__details">
+							<div class="form-content__body body-content">
+								<div class="body-content__select-date">
+									<svg class="_icon-item-calendar">
+										<use xlink:href="img/sprite.svg#item-calendar"></use>
+									</svg>
+									<input class="body-content__input input" type="text" readonly placeholder="Місяць або дата">
+									<svg class="_arrow-down">
+										<use xlink:href="img/sprite.svg#arrow-down"></use>
+									</svg>
+								</div>
+								<div class="body-content__info info-body">
+									<span class="info-body__title _title-h4">Тривалість</span>
+									<div class="info-body__duration" id="duration"></div>
+									<div class="info-body__dates dates-info">
+										<span class="dates-info__days" id="value-from"></span>
+										<span class="dates-info__days" id="value-to"></span>
+									</div>
+								</div>
+
+								<div class="body-content__travels travels-body">
+									<div class="travels-body__content">
+										<svg class="_people">
+											<use xlink:href="img/sprite.svg#people"></use>
+										</svg>
+										<input class="travels-body__select input" readonly="readonly" type="text" placeholder="Кількість подорожуючих">
+										<svg class="_arrow-down">
+											<use xlink:href="img/sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+									<ul class="travels-body__menu menu-body">
+										<li class="menu-body__item">
+											<span class="menu-body__text _title-h4">Дорослих</span>
+											<span class="menu-body__count _title-h4">2</span>
+											<div class="menu-body__btns">
+												<button class="menu-body__btn menu-body__btn--minus" id="minus" type="button">
+													<svg class="_quantity">
+														<use xlink:href="img/sprite.svg#minus"></use>
+													</svg>
+												</button>
+												<button class="menu-body__btn menu-body__btn--plus" id="plus" type="button">
+													<svg class="_quantity">
+														<use xlink:href="img/sprite.svg#plus"></use>
+													</svg>
+												</button>
+											</div>
+										</li>
+										<li class="menu-body__item">
+											<span class="menu-body__text _title-h4">Дітей</span>
+											<span class="menu-body__count _title-h4">0</span>
+											<div class="menu-body__btns">
+												<button class="menu-body__btn menu-body__btn--minus" id="minus" type="button">
+													<svg class="_quantity">
+														<use xlink:href="img/sprite.svg#minus"></use>
+													</svg>
+												</button>
+												<button class="menu-body__btn menu-body__btn--plus" id="plus" type="button">
+													<svg class="_quantity">
+														<use xlink:href="img/sprite.svg#plus"></use>
+													</svg>
+												</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+							</div>	
+						</div>
+
+						<div class="form-content__btns btns-form-content">
+							<button class="btns-form-content__global-search _title-h4" type="button">Розширений пошук</button>
+							<button class="btns-form-content__global-search btns-form-content__global-search--hide _title-h4" type="button">Сховати</button>
+							<button class="btns-form-content__search-travels intro__btn btn btn--white" type="submit">Знайти подорожі</button>
+						</div>
+
+					</form>
+					
+				</div>
+			</div>
+			
+		</section>
+		<section class="page__catalog catalog">
+			<div class="catalog__container _container">
+			<div class="catalog__top">
+				<h2 class="catalog__title _title-h1U">Розпродаж подорожей</h2>
+				<div class="catalog__btns">
+					<button class="catalog__country-btn _active btn btn--white" data-filter="all" type="button">Всі країни</button>
+					<button class="catalog__country-btn btn btn--white" data-filter="sightseeing-tours" type="button">Екскурсійні тури</button>
+					<button class="catalog__country-btn btn btn--white" data-filter="egypt" type="button">Єгипет</button>
+					<button class="catalog__country-btn btn btn--white" data-filter="uae" type="button">ОАЕ</button>
+					<button class="catalog__country-btn btn btn--white" data-filter="sri-lanka" type="button">Шрі Ланка</button>
+					<button class="catalog__country-btn btn btn--white" data-filter="dominicana" type="button">Домінікана</button>
+					<button class="catalog__country-btn btn btn--white" data-filter="thailand" type="button">Тайланд</button>
+					<button class="catalog__country-btn btn btn--white" data-filter="greece" type="button">Греція</button>
+					<button class="catalog__country-btn btn btn--white" data-filter="maldives" type="button">Мальдіви</button>
+					<button class="catalog__country-btn btn btn--white" data-filter="cuba" type="button">Куба</button>
+				</div>
+			</div>
+			<div class="catalog__items">
+				<article class="catalog__item item-catalog" data-country="egypt">
+					<div class="item-catalog__labels">
+						<div class="item-catalog__label item-catalog__label--sale">Розпродаж</div>
+						<div class="item-catalog__label item-catalog__label--top">Топ</div>
+					</div>
+					<a class="item-catalog__picture" href="#">
+						<img src="img/catalog/01.jpg" alt="Єгипет, Шарм Ель Шейк">
+					</a>
+					<div class="item-catalog__body">
+						<div class="item-catalog__country">
+							<span class="item-catalog__id">id: 103980</span>
+							<a href="#" class="item-catalog__title">
+								<h4 class="item-catalog__name _title-h4">Sunrise Marina Port Ghalib 5*</h4>
+							</a>
+							<span class="item-catalog__location _text-2">Єгипет, Шарм Ель Шейк</span>
+						</div>
+						<div class="item-catalog__info">
+							<span class="item-catalog__date">
+								<svg class="_item-calendar">
+									<use xlink:href="img/sprite.svg#item-calendar"></use>
+								</svg>
+								16-26 листопада (20 ночей)
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_visa">
+									<use xlink:href="img/sprite.svg#visa"></use>
+								</svg>
+								Без візи
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_plane">
+									<use xlink:href="img/sprite.svg#plane"></use>
+								</svg>
+								Виліт зі Львову
+							</span>
+						</div>
+						<div class="item-catalog__conditions">
+							<div class="item-catalog__rating">
+								<span class="item-catalog__hotel">Готель</span>
+								<div class="item-catalog__stars">
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="item-catalog__food">
+								<span class="item-catalog__supply">Харчування</span>
+								<span class="item-catalog__supply-type">Ultra All-Inclusive</span>
+							</div>
+						</div>
+						<div class="item-catalog__price">
+							<div class="item-catalog__uah">2 649<span>₴ / особу</span></div>
+							<div class="item-catalog__euro">89 €</div>
+						</div>
+						<div class="item-catalog__add">
+							<svg class="_icon">
+								<use xlink:href="img/sprite.svg#icon"></use>
+							</svg>
+							<button class="item-catalog__btn" type="button">Додати до порівняння</button>
+						</div>
+					</div>
+				</article>
+				<article class="catalog__item item-catalog" data-country="sightseeing-tours">
+					<div class="item-catalog__labels"></div>
+					<a class="item-catalog__picture" href="#">
+						<img src="img/catalog/02.jpg" alt="Чехія, Прага / Угорщина, Будапешт">
+					</a>
+					<div class="item-catalog__body">
+						<div class="item-catalog__country">
+							<span class="item-catalog__id">id: 103981</span>
+							<a href="#" class="item-catalog__title">
+								<h4 class="item-catalog__name _title-h4">Вихідні в Празі</h4>
+							</a>
+							<span class="item-catalog__location _text-2">Чехія, Прага / Угорщина, Будапешт</span>
+						</div>
+						<div class="item-catalog__info">
+							<span class="item-catalog__date">
+								<svg class="_item-calendar">
+									<use xlink:href="img/sprite.svg#item-calendar"></use>
+								</svg>
+								09-12 люього (3 ночі)
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_visa">
+									<use xlink:href="img/sprite.svg#visa"></use>
+								</svg>
+								Без візи
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_bus">
+									<use xlink:href="img/sprite.svg#bus"></use>
+								</svg>
+								Виїзд з Києва
+							</span>
+						</div>
+						<div class="item-catalog__conditions">
+							<div class="item-catalog__rating">
+								<span class="item-catalog__hotel">Готель</span>
+								<div class="item-catalog__stars">
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star-null">
+										<use xlink:href="img/sprite.svg#star-null"></use>
+									</svg>
+									<svg class="_star-null">
+										<use xlink:href="img/sprite.svg#star-null"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="item-catalog__food">
+								<span class="item-catalog__supply">Харчування</span>
+								<span class="item-catalog__supply-type">Сніданки</span>
+							</div>
+						</div>
+						<div class="item-catalog__price">
+							<div class="item-catalog__uah">1 235<span>₴ / особу</span></div>
+							<div class="item-catalog__euro">45 €</div>
+						</div>
+						<div class="item-catalog__add">
+							<svg class="_icon">
+								<use xlink:href="img/sprite.svg#icon"></use>
+							</svg>
+							<button class="item-catalog__btn" type="button">Додати до порівняння</button>
+						</div>
+					</div>
+				</article>
+				<article class="catalog__item item-catalog" data-country="maldives">
+					<div class="item-catalog__labels">
+						<div class="item-catalog__label item-catalog__label--exclusive">Ексклюзивний</div>
+					</div>
+					<a class="item-catalog__picture" href="#">
+						<img src="img/catalog/03.jpg" alt="о. Балі, Денпасар">
+					</a>
+					<div class="item-catalog__body">
+						<div class="item-catalog__country">
+							<span class="item-catalog__id">id: 103982</span>
+							<a href="#" class="item-catalog__title">
+								<h4 class="item-catalog__name _title-h4">Golden Beach Palms Resort 4*</h4>
+							</a>
+							<span class="item-catalog__location _text-2">о. Балі, Денпасар</span>
+						</div>
+						<div class="item-catalog__info">
+							<span class="item-catalog__date">
+								<svg class="_item-calendar">
+									<use xlink:href="img/sprite.svg#item-calendar"></use>
+								</svg>
+								04-14 червня (10 ночей)
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_visa">
+									<use xlink:href="img/sprite.svg#visa"></use>
+								</svg>
+								Без візи
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_plane">
+									<use xlink:href="img/sprite.svg#plane"></use>
+								</svg>
+								Виліт з Одеси
+							</span>
+						</div>
+						<div class="item-catalog__conditions">
+							<div class="item-catalog__rating">
+								<span class="item-catalog__hotel">Готель</span>
+								<div class="item-catalog__stars">
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star-null">
+										<use xlink:href="img/sprite.svg#star-null"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="item-catalog__food">
+								<span class="item-catalog__supply">Харчування</span>
+								<span class="item-catalog__supply-type">Сніданки + вечері</span>
+							</div>
+						</div>
+						<div class="item-catalog__price">
+							<div class="item-catalog__uah">32 500<span>₴ / особу</span></div>
+							<div class="item-catalog__euro">1540 €</div>
+						</div>
+						<div class="item-catalog__add">
+							<svg class="_icon">
+								<use xlink:href="img/sprite.svg#icon"></use>
+							</svg>
+							<button class="item-catalog__btn" type="button">Додати до порівняння</button>
+						</div>
+					</div>
+				</article>
+				<article class="catalog__item item-catalog" data-country="sightseeing-tours">
+					<div class="item-catalog__labels">
+						<div class="item-catalog__label item-catalog__label--sale">Розпродаж</div>
+						<div class="item-catalog__label item-catalog__label--new">Новий</div>
+						<div class="item-catalog__label item-catalog__label--top">Топ</div>
+					</div>
+					<a class="item-catalog__picture" href="#">
+						<img src="img/catalog/04.jpg" alt="Дубаї">
+					</a>
+					<div class="item-catalog__body">
+						<div class="item-catalog__country">
+							<span class="item-catalog__id">id: 103983</span>
+							<a href="#" class="item-catalog__title">
+								<h4 class="item-catalog__name _title-h4">Галопом по Європах</h4>
+							</a>
+							<span class="item-catalog__location _text-2">Дубаї</span>
+						</div>
+						<div class="item-catalog__info">
+							<span class="item-catalog__date">
+								<svg class="_item-calendar">
+									<use xlink:href="img/sprite.svg#item-calendar"></use>
+								</svg>
+								02-22 липня (20 ночей)
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_visa">
+									<use xlink:href="img/sprite.svg#visa"></use>
+								</svg>
+								Без візи
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_plane">
+									<use xlink:href="img/sprite.svg#plane"></use>
+								</svg>
+								Виліт з Борисполя
+							</span>
+						</div>
+						<div class="item-catalog__conditions">
+							<div class="item-catalog__rating">
+								<span class="item-catalog__hotel">Готель</span>
+								<div class="item-catalog__stars">
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="item-catalog__food">
+								<span class="item-catalog__supply">Харчування</span>
+								<span class="item-catalog__supply-type">Ultra All-Inclusive</span>
+							</div>
+						</div>
+						<div class="item-catalog__price">
+							<div class="item-catalog__uah">125 000<span>₴ / особу</span></div>
+							<div class="item-catalog__euro">3826 €</div>
+						</div>
+						<div class="item-catalog__add">
+							<svg class="_icon">
+								<use xlink:href="img/sprite.svg#icon"></use>
+							</svg>
+							<button class="item-catalog__btn" type="button">Додати до порівняння</button>
+						</div>
+					</div>
+				</article>
+				<article class="catalog__item item-catalog" data-country="sightseeing-tours">
+					<div class="item-catalog__labels">
+						<div class="item-catalog__label item-catalog__label--sale">Розпродаж</div>
+						<div class="item-catalog__label item-catalog__label--top">Топ</div>
+					</div>
+					<a class="item-catalog__picture" href="#">
+						<img src="img/catalog/05.jpg" alt="Чехія, Прага / Угорщина, Будапешт">
+					</a>
+					<div class="item-catalog__body">
+						<div class="item-catalog__country">
+							<span class="item-catalog__id">id: 103984</span>
+							<a href="#" class="item-catalog__title">
+								<h4 class="item-catalog__name _title-h4">Галопом по Європах</h4>
+							</a>
+							<span class="item-catalog__location _text-2">Чехія, Прага / Угорщина, Будапешт</span>
+						</div>
+						<div class="item-catalog__info">
+							<span class="item-catalog__date">
+								<svg class="_item-calendar">
+									<use xlink:href="img/sprite.svg#item-calendar"></use>
+								</svg>
+								18-28 вересня (10 ночей)
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_visa">
+									<use xlink:href="img/sprite.svg#visa"></use>
+								</svg>
+								Без візи
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_plane">
+									<use xlink:href="img/sprite.svg#plane"></use>
+								</svg>
+								Виліт зі Львову
+							</span>
+						</div>
+						<div class="item-catalog__conditions">
+							<div class="item-catalog__rating">
+								<span class="item-catalog__hotel">Готель</span>
+								<div class="item-catalog__stars">
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star-null">
+										<use xlink:href="img/sprite.svg#star-null"></use>
+									</svg>
+									<svg class="_star-null">
+										<use xlink:href="img/sprite.svg#star-null"></use>
+									</svg>
+									<svg class="_star-null">
+										<use xlink:href="img/sprite.svg#star-null"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="item-catalog__food">
+								<span class="item-catalog__supply">Харчування</span>
+								<span class="item-catalog__supply-type">Ultra All-Inclusive</span>
+							</div>
+						</div>
+						<div class="item-catalog__price">
+							<div class="item-catalog__uah">800<span>₴ / особу</span></div>
+							<div class="item-catalog__euro">25 €</div>
+						</div>
+						<div class="item-catalog__add">
+							<svg class="_icon">
+								<use xlink:href="img/sprite.svg#icon"></use>
+							</svg>
+							<button class="item-catalog__btn" type="button">Додати до порівняння</button>
+						</div>
+					</div>
+				</article>
+				<article class="catalog__item item-catalog" data-country="egypt">
+					<div class="item-catalog__labels"></div>
+					<a class="item-catalog__picture" href="#">
+						<img src="img/catalog/06.jpg" alt="Єгипет, Шарм Ель Шейк">
+					</a>
+					<div class="item-catalog__body">
+						<div class="item-catalog__country">
+							<span class="item-catalog__id">id: 103985</span>
+							<a href="#" class="item-catalog__title">
+								<h4 class="item-catalog__name _title-h4">Sunrise Marina Port Ghalib 5*</h4>
+							</a>
+							<span class="item-catalog__location _text-2">Єгипет, Шарм Ель Шейк</span>
+						</div>
+						<div class="item-catalog__info">
+							<span class="item-catalog__date">
+								<svg class="_item-calendar">
+									<use xlink:href="img/sprite.svg#item-calendar"></use>
+								</svg>
+								07-16 люього (9 ночей)
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_visa">
+									<use xlink:href="img/sprite.svg#visa"></use>
+								</svg>
+								Без візи
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_bus">
+									<use xlink:href="img/sprite.svg#bus"></use>
+								</svg>
+								Виїзд з Києва
+							</span>
+						</div>
+						<div class="item-catalog__conditions">
+							<div class="item-catalog__rating">
+								<span class="item-catalog__hotel">Готель</span>
+								<div class="item-catalog__stars">
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star-null">
+										<use xlink:href="img/sprite.svg#star-null"></use>
+									</svg>
+									<svg class="_star-null">
+										<use xlink:href="img/sprite.svg#star-null"></use>
+									</svg>
+									<svg class="_star-null">
+										<use xlink:href="img/sprite.svg#star-null"></use>
+									</svg>
+									<svg class="_star-null">
+										<use xlink:href="img/sprite.svg#star-null"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="item-catalog__food">
+								<span class="item-catalog__supply">Харчування</span>
+								<span class="item-catalog__supply-type">Вечері</span>
+							</div>
+						</div>
+						<div class="item-catalog__price">
+							<div class="item-catalog__uah">600<span>₴ / особу</span></div>
+							<div class="item-catalog__euro">18 €</div>
+						</div>
+						<div class="item-catalog__add">
+							<svg class="_icon">
+								<use xlink:href="img/sprite.svg#icon"></use>
+							</svg>
+							<button class="item-catalog__btn" type="button">Додати до порівняння</button>
+						</div>
+					</div>
+				</article>
+				<article class="catalog__item item-catalog" data-country="maldives">
+					<div class="item-catalog__labels">
+						<div class="item-catalog__label item-catalog__label--exclusive">Ексклюзивний</div>
+					</div>
+					<a class="item-catalog__picture" href="#">
+						<img src="img/catalog/07.jpg" alt="о. Балі, Денпасар">
+					</a>
+					<div class="item-catalog__body">
+						<div class="item-catalog__country">
+							<span class="item-catalog__id">id: 103985</span>
+							<a href="#" class="item-catalog__title">
+								<h4 class="item-catalog__name _title-h4">Golden Beach Palms Resort 4*</h4>
+							</a>
+							<span class="item-catalog__location _text-2">о. Балі, Денпасар</span>
+						</div>
+						<div class="item-catalog__info">
+							<span class="item-catalog__date">
+								<svg class="_item-calendar">
+									<use xlink:href="img/sprite.svg#item-calendar"></use>
+								</svg>
+								08-20 червня (12 ночей)
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_visa">
+									<use xlink:href="img/sprite.svg#visa"></use>
+								</svg>
+								Без візи
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_plane">
+									<use xlink:href="img/sprite.svg#plane"></use>
+								</svg>
+								Виліт з Одеси
+							</span>
+						</div>
+						<div class="item-catalog__conditions">
+							<div class="item-catalog__rating">
+								<span class="item-catalog__hotel">Готель</span>
+								<div class="item-catalog__stars">
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="item-catalog__food">
+								<span class="item-catalog__supply">Харчування</span>
+								<span class="item-catalog__supply-type">Сніданки + вечері</span>
+							</div>
+						</div>
+						<div class="item-catalog__price">
+							<div class="item-catalog__uah">67 299<span>₴ / особу</span></div>
+							<div class="item-catalog__euro">2066 €</div>
+						</div>
+						<div class="item-catalog__add">
+							<svg class="_icon">
+								<use xlink:href="img/sprite.svg#icon"></use>
+							</svg>
+							<button class="item-catalog__btn" type="button">Додати до порівняння</button>
+						</div>
+					</div>
+				</article>
+				<article class="catalog__item item-catalog" data-country="sightseeing-tours">
+					<div class="item-catalog__labels">
+						<div class="item-catalog__label item-catalog__label--sale">Розпродаж</div>
+						<div class="item-catalog__label item-catalog__label--new">Новий</div>
+						<div class="item-catalog__label item-catalog__label--top">Топ</div>
+					</div>
+					<a class="item-catalog__picture" href="#">
+						<img src="img/catalog/08.jpg" alt="Дубаї">
+					</a>
+					<div class="item-catalog__body">
+						<div class="item-catalog__country">
+							<span class="item-catalog__id">id: 103986</span>
+							<a href="#" class="item-catalog__title">
+								<h4 class="item-catalog__name _title-h4">Галопом по Європах</h4>
+							</a>
+							<span class="item-catalog__location _text-2">Дубаї</span>
+						</div>
+						<div class="item-catalog__info">
+							<span class="item-catalog__date">
+								<svg class="_item-calendar">
+									<use xlink:href="img/sprite.svg#item-calendar"></use>
+								</svg>
+								01-30 серпня (29 ночей)
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_visa">
+									<use xlink:href="img/sprite.svg#visa"></use>
+								</svg>
+								Без візи
+							</span>
+							<span class="item-catalog__date">
+								<svg class="_plane">
+									<use xlink:href="img/sprite.svg#plane"></use>
+								</svg>
+								Виліт з Борисполя
+							</span>
+						</div>
+						<div class="item-catalog__conditions">
+							<div class="item-catalog__rating">
+								<span class="item-catalog__hotel">Готель</span>
+								<div class="item-catalog__stars">
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+									<svg class="_star">
+										<use xlink:href="img/sprite.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="item-catalog__food">
+								<span class="item-catalog__supply">Харчування</span>
+								<span class="item-catalog__supply-type">Ultra All-Inclusive</span>
+							</div>
+						</div>
+						<div class="item-catalog__price">
+							<div class="item-catalog__uah">225 000<span>₴ / особу</span></div>
+							<div class="item-catalog__euro">6905 €</div>
+						</div>
+						<div class="item-catalog__add">
+							<svg class="_icon">
+								<use xlink:href="img/sprite.svg#icon"></use>
+							</svg>
+							<button class="item-catalog__btn" type="button">Додати до порівняння</button>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="catalog__bottom">
+				<a class="catalog__show-more btn btn--blue" href="#">Всі акційні подорожі</a>
+			</div>
+			</div>
+		</section>	
+		<section class="page__sub sub">
+			<div class="sub__container _container">
+				<h2 class="sub__title _title-h1U">Отримуйте найвигідніші пропозиції першими — підпишіться на нашу розсилку</h2>
+				<div class="sub__body">
+					<div class="sub__top">
+						<h3 class="sub__subtitle _title-h3" data-type="email">По email:</h3>
+						<h3 class="sub__subtitle _title-h3 _active" data-type="phone">По смс:</h3>
+					</div>
+					<form action="#" class="sub__form form-sub">
+						<div class="form-sub__contacts form-sub__contacts--email" data-show="email">
+							<svg class="_mail">
+								<use xlink:href="img/sprite.svg#mail"></use>
+							</svg>
+							<input class="form-sub__input input _title-h4" type="text" placeholder="Ваш email адрес">
+							<button class="form-sub__btn" type="submit">Підписатись</button>
+						</div>
+						<div class="form-sub__contacts form-sub__contacts--phone" data-show="phone">
+							<svg class="_mob">
+								<use xlink:href="img/sprite.svg#mob"></use>
+							</svg>
+							<input class="form-sub__input input _title-h4" type="tel" placeholder="Ваш номер телефону">
+							<button class="form-sub__btn" type="submit">Підписатись</button>
+						</div>
+					</form>
+					<div class="sub__subscribe">
+						<span class="sub__text _text-2">Не більше 1 повідомлення в тиждень. Ніякого спаму. Ви зможете відписатись будь-коли забажаєте.</span>
+						<button class="sub__btn btn btn--white" type="submit">Підписатись</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="page__offers offers">
+			<div class="offers__container _container">
+				<h2 class="offers__title _title-h1U">Спеціальні пропозиції</h2>
+				<div class="offers__items swiper-container">
+					<div class="offers__wrapper swiper-wrapper">
+						<div class="offers__item swiper-slide">
+							<a class="offers__picture" href="#">
+								<img src="img/offers/01.jpg" alt="special offer">
+							</a>
+							<div class="offers__content content-offers">
+								<h3 class="content-offers__title _title-h3">Весілля за кордоном</h3>
+								<p class="content-offers__text _text-2">Перетворіть своє весілля на незабутню казку, неповторне дійство в одному з найчарівніших куточків світу.</p>
+								<a class="offers__link" href="#">Дізнатися більше</a>
+							</div>
+						</div>
+						<div class="offers__item swiper-slide">
+							<a class="offers__picture" href="#">
+								<img src="img/offers/02.jpg" alt="special offer">
+							</a>
+							<div class="offers__content content-offers">
+								<h3 class="content-offers__title _title-h3">Весілля за кордоном</h3>
+								<p class="content-offers__text _text-2">Перетворіть своє весілля на незабутню казку, неповторне дійство в одному з найчарівніших куточків світу.</p>
+								<a class="offers__link" href="#">Дізнатися більше</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="offers__dotts offers__paginations paginations"></div>
+			</div>
+		</section>	
+		<section class="page__quotes quotes">
+			<div class="quotes__container _container">
+				<h2 class="quotes__title _title-h1U">Відгуки туристів</h2>
+				<div class="quotes__items swiper-container">
+					<div class="quotes__wrapper swiper-wrapper">
+						<div class="quotes__slide swiper-slide">
+							<div class="quotes__name _title-h4">Ростислав (22)</div>
+							<p class="quotes__text _text-2">Мне очень понравилось отдыхать в этом отеле. Единственный недостаток-не очень понравилась кухня, хотя питание было очень качественное и выбор блюд все же очень большой.Зато благодаря тому, что многие подходящие мне блюда приелись за три недели-я немного сбросила вес-а это тоже плюс! Номера комфортабельные, убираются ежедневно. Персонал очень доброжелательный. Спасибо огромное всем работникам этого отеля за прекрасный отдых!</p>
+						</div>
+						<div class="quotes__slide swiper-slide">
+							<div class="quotes__name _title-h4">Андрій (21)</div>
+							<p class="quotes__text _text-2">Хороший отдых начинается с планирования.</p>
+						</div>
+						<div class="quotes__slide swiper-slide">
+							<div class="quotes__name _title-h4">Олександр (43)</div>
+							<p class="quotes__text _text-2">Хочу поделиться своими эмоциями от пребывания в Sol Nessebar Palace Hotel 5*. Отдыхали семьей в Болгарии первый раз, остались мега довольны. Огромный ухоженный отель, большая, зеленая, чистая территория, ресторан с разнообразной, вкусной кухней. Большой бонус отеля, наличие аквапарка, мы все с удовольствием катались на разнообразных горках. Так как мы любители пеших прогулок, посетили Старый город Несебр, с его завораживающими улочками, гостеприимными хозяевами, ресторанчиками со всевозможным рыбным меню.
+							</p>
+						</div>
+						<div class="quotes__slide swiper-slide">
+							<div class="quotes__name _title-h4">Антоніна (34)</div>
+							<p class="quotes__text _text-2">Отель очень красивый. Просторные , уютные номера. Красивая територия с небольшим парком. Много развлечений для детей. Вкусная и разнообразная кухня!!! Летом обязательно приедем ещё раз!!!</p>
+						</div>
+						<div class="quotes__slide swiper-slide">
+							<div class="quotes__name _title-h4">Наталія (25)</div>
+							<p class="quotes__text _text-2">Отдыхали семьей в июле (2 взр. + 2 детей). Остались довольны. Даже слишком довольны. Мы в восторге!!! Не ожидали от Болгарии такого сервиса и комфортных условий для отдыха. Все на высшем уровне: обслуживание, сервис, меню ресторана разнообразное и готовиться все ОООчень вкусно, в номерах ежедневная чистота со сменой постельного белья и приятный дизайн</p>
+						</div>
+						<div class="quotes__slide swiper-slide">
+							<div class="quotes__name _title-h4">Марина (28)</div>
+							<p class="quotes__text _text-2">Выбрала отель по отзывам. Туроператор "Акрис-тур". Первой неожиданностью было то, что мест для нас в отеле не оказалось! И поэтому мне предложили рядом стоящий Bay4* , в компенсацию-номер на море и сейф бесплатно!И все это на 5 дней, а потом назад, в Palace5*. Конечно, если бы рядом был мой муж, вышел бы, немного немало , международный скандал, мягко говоря. Но, поразмыслив над тем, на сколько дней(14) я приехала сюда с детьми, а также то, что администрация пошла нам на встречу, выдав браслеты Palace5*, возможность питаться в том ресторане, и бесплатный сейф и номер с видом на море( мы покупали с видом на парк), я пришла к умозаключению, что все не так уж и плохо. Муниципальный пляж нам не понравился(кучи бычков).</p>
+						</div>
+					</div>
+				</div>
+				<div class="quotes__arrows slider-arrows">
+					<button class="slider-arrow slider-arrows__prev" type="button">
+						<svg class="_slider-arrow _slider-arrow__prev">
+							<use xlink:href="img/sprite.svg#slider-arrow-prev"></use>
+						 </svg>
+					</button>
+					<button class="slider-arrow slider-arrows__next" type="button">
+						<svg class="_slider-arrow _slider-arrow__next">
+							<use xlink:href="img/sprite.svg#slider-arrow-prev"></use>
+						 </svg>
+					</button>
+				</div>
+				<div class="quotes__dotts quotes__paginations paginations"></div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__inner">
+			<div class="footer__info info-footer">
+				<div class="info-footer__logo">
+					<a class="info-footer__link" href="#">Touristo</a>
+				</div>
+				<div class="info-footer__contacts contacts-info">
+					<div class="contacts-info__mail">
+						<svg class="_footer-icon">
+							<use xlink:href="img/sprite.svg#mail"></use>
+						</svg>
+						<a class="contacts-info__mailto _title-h4" href="mailto:touristo@gmail.com">touristo@gmail.com</a>
+					</div>
+					<div class="contacts-info__mob-phone">
+						<svg class="_footer-icon">
+							<use xlink:href="img/sprite.svg#mob"></use>
+						</svg>
+						<a class="contacts-info__number _title-h4" href="tel:+381234565689">+38 123 456 56 89</a>
+						<a class="contacts-info__number _title-h4" href="tel:+381234565689">+38 123 456 56 89</a>
+					</div>
+					<div class="contacts-info__address">
+						<svg class="_footer-icon">
+							<use xlink:href="img/sprite.svg#location"></use>
+						</svg>
+						<span class="contacts-info__location _title-h4">м. Ужгород,</span>
+						<span class="contacts-info__location _title-h4">вул. Івана Франка 1в, оф. 1 </span>
+					</div>
+				</div>
+				<ul class="info-footer__list">
+					<li class="info-footer__item">
+						<a class="info-footer__social" href="#" target="_blank">
+							<svg class="_social">
+								<use xlink:href="img/sprite.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="info-footer__item">
+						<a class="info-footer__social" href="#" target="_blank">
+							<svg class="_social">
+								<use xlink:href="img/sprite.svg#vk"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="info-footer__item">
+						<a class="info-footer__social" href="#" target="_blank">
+							<svg class="_social">
+								<use xlink:href="img/sprite.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__items">
+				<div class="footer__column">
+					<button class="footer__title" type="button">Подорожі</button>
+					<svg class="_arrow-down">
+						<use xlink:href="img/sprite.svg#arrow-down"></use>
+					</svg>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="#">Пошук турів</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Каталог турів</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Весілля за кордоном</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__column">
+					<button class="footer__title" type="button">Розпродаж</button>
+					<svg class="_arrow-down">
+						<use xlink:href="img/sprite.svg#arrow-down"></use>
+					</svg>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="#">Акційні подорожі</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Що таке Бамбарбія</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__column">
+					<button class="footer__title" type="button">Країни</button>
+					<svg class="_arrow-down">
+						<use xlink:href="img/sprite.svg#arrow-down"></use>
+					</svg>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="#">Єгипет</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">ОАЄ</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Туреччина</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Домінікана</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Шрі Ланка</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Тайланд</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Греція</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__column">
+					<button class="footer__title" type="button">Про нас</button>
+					<svg class="_arrow-down">
+						<use xlink:href="img/sprite.svg#arrow-down"></use>
+					</svg>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="footer__link" href="#">Про компанію</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Послуги</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Типові запитання</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Доставка та оплата</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link" href="#">Контакти</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</div>
+
+<script src="js/vendors.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
