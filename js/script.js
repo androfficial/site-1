@@ -64,15 +64,10 @@ window.addEventListener('scroll', checkScroll)
 const form   = document.querySelector('.form-sub');
 const inputs = form.querySelectorAll('input');
 
-form.addEventListener('submit', (e) => {
-   //console.log(e.target);
+form.addEventListener('click', (e) => { // submit
    e.preventDefault();
-   if (inputs.length > 0) {
-      for (let input of inputs) {
-         if (input.value === '') {
-            input.parentElement.classList.add('_error');
-         }
-      }
+   if (e.target.classList.contains('form-sub__btn') && e.target.previousElementSibling.value === '') {
+      e.target.parentElement.classList.add('_error');
    }
    onChange();
 });
