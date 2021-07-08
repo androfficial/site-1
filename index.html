@@ -97,7 +97,7 @@
 									<use xlink:href="img/sprite.svg#search"></use>
 								</svg>
 							</button>
-							<input class="top-form-content__input input" type="text" placeholder="Країна, місто, регіон, готель">
+							<input class="top-form-content__input input _req" type="text" placeholder="Країна, місто, регіон, готель">
 						</div>
 						
 						<div class="form-content__details">
@@ -799,12 +799,12 @@
 						<h3 class="sub__subtitle _title-h3" data-type="email">По email:</h3>
 						<h3 class="sub__subtitle _title-h3 _active" data-type="phone">По смс:</h3>
 					</div>
-					<form action="#" class="sub__form form-sub">
+					<form action="#" class="sub__form form-sub" id="form">
 						<div class="form-sub__contacts form-sub__contacts--email" data-show="email">
 							<svg class="_mail">
 								<use xlink:href="img/sprite.svg#mail"></use>
 							</svg>
-							<input class="form-sub__input input _title-h4" type="text" placeholder="Ваш email адрес">
+							<input class="form-sub__input input _email _title-h4" type="text" placeholder="Ваш email адрес">
 							<button class="form-sub__btn" type="submit">Підписатись</button>
 						</div>
 						<div class="form-sub__contacts form-sub__contacts--phone" data-show="phone">
@@ -814,11 +814,11 @@
 							<input class="form-sub__input input _title-h4" type="tel" placeholder="Ваш номер телефону">
 							<button class="form-sub__btn" type="submit">Підписатись</button>
 						</div>
+						<div class="sub__subscribe">
+							<span class="sub__text _text-2">Не більше 1 повідомлення в тиждень. Ніякого спаму. Ви зможете відписатись будь-коли забажаєте.</span>
+							<button class="sub__btn btn btn--white" type="submit">Підписатись</button>
+						</div>
 					</form>
-					<div class="sub__subscribe">
-						<span class="sub__text _text-2">Не більше 1 повідомлення в тиждень. Ніякого спаму. Ви зможете відписатись будь-коли забажаєте.</span>
-						<button class="sub__btn btn btn--white" type="submit">Підписатись</button>
-					</div>
 				</div>
 			</div>
 		</section>

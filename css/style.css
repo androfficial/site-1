@@ -263,6 +263,32 @@ body._lock {
           flex: 0 0 auto;
 }
 
+._error {
+  border-color: red !important;
+}
+
+._error::after {
+  content: "Введи емейл ебанашка :)";
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  z-index: 100;
+  font-weight: 500;
+  background-color: #fff;
+  color: red;
+  border-radius: 8px;
+  border: 1px solid red;
+  width: auto;
+  height: 25px;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 ._title-h1A {
   font-family: "Avenir";
   font-weight: 700;
@@ -863,12 +889,20 @@ body._lock {
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
-  color: #9B9B9B;
-  background-color: #fff;
   width: 100%;
   height: 72px;
+  color: #9B9B9B;
+  background-color: #fff;
   padding: 24px 24px 24px;
   padding-left: 64px;
+  border: 1px solid transparent;
+  -webkit-transition: border-color .3s ease 0s;
+  -o-transition: border-color .3s ease 0s;
+  transition: border-color .3s ease 0s;
+}
+
+.top-form-content__input._error {
+  border-color: red;
 }
 
 .body-content {
@@ -1659,14 +1693,6 @@ body._lock {
   color: #fff;
 }
 
-.sub__subscribe {
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: row;
-  -ms-grid-columns: 55.7037%;
-  grid-template-columns: 55.7037%;
-}
-
 .sub__btn {
   display: none;
   margin-top: 20px;
@@ -1681,6 +1707,7 @@ body._lock {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  row-gap: 15px;
 }
 
 .form-sub:not(:last-child) {
@@ -1698,6 +1725,15 @@ body._lock {
           align-items: center;
   background-color: #fff;
   border-radius: 8px;
+  position: relative;
+  border: 1.5px solid transparent;
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+
+.form-sub__contacts--phone._error::after {
+  content: "Телефончик написал падла ^-^";
 }
 
 .form-sub__contacts._show {
@@ -2684,12 +2720,6 @@ body._lock {
     border-color: #fff;
   }
 
-  .sub__subscribe {
-    display: block;
-    -ms-grid-columns: auto;
-    grid-template-columns: auto;
-  }
-
   .sub__btn {
     display: inline-block;
   }
@@ -2824,10 +2854,6 @@ body._lock {
 
   .sub__text {
     text-align: left;
-  }
-
-  .sub__subscribe {
-    text-align: center;
   }
 
   .footer__items {
