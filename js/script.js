@@ -235,31 +235,23 @@ $('.btns-form-content__global-search--hide').click(function (e) {
    $(this).removeClass('_show');
    $('.btns-form-content__global-search').removeClass('_hide');
 });
-const newFilter = () => {
-	const allBtns  = document.querySelector('.catalog__btns');
-	const allItems = document.querySelectorAll('.catalog__item');
+const allBtns = document.querySelector('.catalog__btns');
+allBtns.addEventListener('click', (e) => {
+   if (e.target.classList.contains('catalog__country-btn')) {
+      document.querySelector('.catalog__country-btn._active').classList.remove('_active');
+      e.target.classList.add('_active');
+   }
+});
 
-	allBtns.addEventListener('click', (e) => {
-		let target = e.target;
-		if (target.classList.contains('catalog__country-btn')) {
-			document.querySelector('.catalog__country-btn._active').classList.remove('_active');
-			target.classList.add('_active');
-			let btnAttr = target.getAttribute('data-filter');
-			for (let item of allItems) {
-				let itemAttr = item.getAttribute('data-country');
-				if (btnAttr !== itemAttr && btnAttr !== 'all') {
-					item.classList.add('_hide');
-				} else {
-					item.classList.remove('_anime');
-					item.classList.remove('_hide');
-				}
-			}
-		}
-	});
-
-};
-
-newFilter();
+const mixer = mixitup('.catalog__items', {
+   selectors: {
+      target: '.mix',
+   },
+   animation: {
+      easing: 'ease-in-out',
+      duration: 400
+   }
+});
 if (window.innerWidth < 992 && isMobile.any()) {
    document.querySelector('.sub__top').addEventListener('click', (e) => {
       if (e.target.classList.contains('sub__subtitle')) {
