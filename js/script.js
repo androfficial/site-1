@@ -294,7 +294,7 @@ if (document.querySelector('.offers__items')) {
       observeParents: true,
       slidesPerView: 2,
       spaceBetween: 32,
-      speed: 800,
+      speed: 1000,
       watchOverflow: false,
       simulateTouch: false,
 
