@@ -117,6 +117,17 @@ burger.addEventListener('click', () => {
 //    }
 // });
 
+// const calendarBody  = document.querySelector('.body-content__select-date');
+// const calendarInput = document.querySelector('.body-content__input');
+// const calendarArrow = calendarInput.nextElementSibling;
+
+// calendarBody.addEventListener('click', (e) => {
+//    if (e.target.classList.contains('body-content__input') || e.target.classList.contains('_arrow-down') && !e.target.classList.contains('_icon-item-calendar')) {
+//       calendarArrow.classList.add('_init');
+//       clickToClose(calendarArrow);
+//    }
+// });
+ 
 $('.body-content__input').datepicker({
    // inline: true,
    offset: 5,
@@ -126,6 +137,22 @@ $('.body-content__input').datepicker({
    dateFormat: "dd MM",
    autoClose: true
 })
+
+// $('.body-content__input').click(function(e) {
+//    if ($(this).data('count')) {
+//       if ($('.datepicker').is(':visible')){
+//            $(this).datepicker('hide');
+//       } else {
+//            $(this).datepicker('show');
+//       }
+//      } else {
+//        $(this).data('count', 1);
+//     }
+// });
+
+// $('.body-content__input').blur(function() {
+//    $(this).data('count', '')
+// });
 const uiSlider = document.getElementById('duration');
 
 noUiSlider.create(uiSlider, {
@@ -210,18 +237,6 @@ const clickToClose = (object) => {
       }
    });
 };
-
-
-const calendarBody  = document.querySelector('.body-content__select-date');
-const calendarInput = document.querySelector('.body-content__input');
-const calendarArrow = calendarInput.nextElementSibling;
-
-calendarBody.addEventListener('click', (e) => {
-   if (e.target.classList.contains('body-content__input') || e.target.classList.contains('_arrow-down') && !e.target.classList.contains('_icon-item-calendar')) {
-      calendarArrow.classList.add('_init');
-      clickToClose(calendarArrow);
-   }
-});
 $('.btns-form-content__global-search').click(function (e) {
    e.preventDefault();
    $('.form-content__details').slideDown(400);

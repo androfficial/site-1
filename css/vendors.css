@@ -175,7 +175,7 @@
           flex: 1;
   text-align: center;
   text-transform: uppercase;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .datepicker--cell-day {
@@ -699,7 +699,7 @@
 
 .datepicker--time-current-hours:after,
 .datepicker--time-current-minutes:after {
-  content: '';
+  content: "";
   background: #f0f0f0;
   border-radius: 4px;
   position: absolute;
@@ -745,7 +745,7 @@
   margin-bottom: 4px;
 }
 
-.datepicker--time-row input[type='range'] {
+.datepicker--time-row input[type=range] {
   background: none;
   cursor: pointer;
   -ms-flex: 1;
@@ -757,46 +757,46 @@
   -webkit-appearance: none;
 }
 
-.datepicker--time-row input[type='range']::-webkit-slider-thumb {
+.datepicker--time-row input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
-.datepicker--time-row input[type='range']::-ms-tooltip {
+.datepicker--time-row input[type=range]::-ms-tooltip {
   display: none;
 }
 
-.datepicker--time-row input[type='range']:hover::-webkit-slider-thumb {
+.datepicker--time-row input[type=range]:hover::-webkit-slider-thumb {
   border-color: #b8b8b8;
 }
 
-.datepicker--time-row input[type='range']:hover::-moz-range-thumb {
+.datepicker--time-row input[type=range]:hover::-moz-range-thumb {
   border-color: #b8b8b8;
 }
 
-.datepicker--time-row input[type='range']:hover::-ms-thumb {
+.datepicker--time-row input[type=range]:hover::-ms-thumb {
   border-color: #b8b8b8;
 }
 
-.datepicker--time-row input[type='range']:focus {
+.datepicker--time-row input[type=range]:focus {
   outline: none;
 }
 
-.datepicker--time-row input[type='range']:focus::-webkit-slider-thumb {
+.datepicker--time-row input[type=range]:focus::-webkit-slider-thumb {
   background: #5cc4ef;
   border-color: #5cc4ef;
 }
 
-.datepicker--time-row input[type='range']:focus::-moz-range-thumb {
+.datepicker--time-row input[type=range]:focus::-moz-range-thumb {
   background: #5cc4ef;
   border-color: #5cc4ef;
 }
 
-.datepicker--time-row input[type='range']:focus::-ms-thumb {
+.datepicker--time-row input[type=range]:focus::-ms-thumb {
   background: #5cc4ef;
   border-color: #5cc4ef;
 }
 
-.datepicker--time-row input[type='range']::-webkit-slider-thumb {
+.datepicker--time-row input[type=range]::-webkit-slider-thumb {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 12px;
@@ -805,11 +805,11 @@
   border: 1px solid #dedede;
   background: #fff;
   cursor: pointer;
-  -webkit-transition: background .2s;
-  transition: background .2s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
 }
 
-.datepicker--time-row input[type='range']::-moz-range-thumb {
+.datepicker--time-row input[type=range]::-moz-range-thumb {
   box-sizing: border-box;
   height: 12px;
   width: 12px;
@@ -817,11 +817,11 @@
   border: 1px solid #dedede;
   background: #fff;
   cursor: pointer;
-  -moz-transition: background .2s;
-  transition: background .2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
 }
 
-.datepicker--time-row input[type='range']::-ms-thumb {
+.datepicker--time-row input[type=range]::-ms-thumb {
   box-sizing: border-box;
   height: 12px;
   width: 12px;
@@ -829,15 +829,15 @@
   border: 1px solid #dedede;
   background: #fff;
   cursor: pointer;
-  -ms-transition: background .2s;
-  transition: background .2s;
+  -ms-transition: background 0.2s;
+  transition: background 0.2s;
 }
 
-.datepicker--time-row input[type='range']::-webkit-slider-thumb {
+.datepicker--time-row input[type=range]::-webkit-slider-thumb {
   margin-top: -6px;
 }
 
-.datepicker--time-row input[type='range']::-webkit-slider-runnable-track {
+.datepicker--time-row input[type=range]::-webkit-slider-runnable-track {
   border: none;
   height: 1px;
   cursor: pointer;
@@ -845,7 +845,7 @@
   background: transparent;
 }
 
-.datepicker--time-row input[type='range']::-moz-range-track {
+.datepicker--time-row input[type=range]::-moz-range-track {
   border: none;
   height: 1px;
   cursor: pointer;
@@ -853,7 +853,7 @@
   background: transparent;
 }
 
-.datepicker--time-row input[type='range']::-ms-track {
+.datepicker--time-row input[type=range]::-ms-track {
   border: none;
   height: 1px;
   cursor: pointer;
@@ -861,11 +861,11 @@
   background: transparent;
 }
 
-.datepicker--time-row input[type='range']::-ms-fill-lower {
+.datepicker--time-row input[type=range]::-ms-fill-lower {
   background: transparent;
 }
 
-.datepicker--time-row input[type='range']::-ms-fill-upper {
+.datepicker--time-row input[type=range]::-ms-fill-upper {
   background: transparent;
 }
 
@@ -886,13 +886,13 @@
 
 .datepicker--time-icon:after,
 .datepicker--time-icon:before {
-  content: '';
+  content: "";
   background: currentColor;
   position: absolute;
 }
 
 .datepicker--time-icon:after {
-  height: .4em;
+  height: 0.4em;
   width: 1px;
   left: calc(50% - 1px);
   top: calc(50% + 1px);
@@ -902,7 +902,7 @@
 }
 
 .datepicker--time-icon:before {
-  width: .4em;
+  width: 0.4em;
   height: 1px;
   top: calc(50% + 1px);
   left: calc(50% - 1px);
@@ -1033,12 +1033,12 @@
 
 .noUi-state-tap .noUi-connect,
 .noUi-state-tap .noUi-origin {
-  -webkit-transition: transform .3s;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  -o-transition: transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .noUi-state-drag * {
@@ -1076,8 +1076,8 @@
   background: #FAFAFA;
   border-radius: 4px;
   border: 1px solid #D3D3D3;
-  -webkit-box-shadow: inset 0 1px 1px #F0F0F0,0 3px 6px -5px #BBB;
-          box-shadow: inset 0 1px 1px #F0F0F0,0 3px 6px -5px #BBB;
+  -webkit-box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+          box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
 }
 
 .noUi-connects {
@@ -1101,13 +1101,13 @@
   border-radius: 3px;
   background: #FFF;
   cursor: default;
-  -webkit-box-shadow: inset 0 0 1px #FFF,inset 0 1px 7px #EBEBEB,0 3px 6px -3px #BBB;
-          box-shadow: inset 0 0 1px #FFF,inset 0 1px 7px #EBEBEB,0 3px 6px -3px #BBB;
+  -webkit-box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+          box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
 }
 
 .noUi-active {
-  -webkit-box-shadow: inset 0 0 1px #FFF,inset 0 1px 7px #DDD,0 3px 6px -3px #BBB;
-          box-shadow: inset 0 0 1px #FFF,inset 0 1px 7px #DDD,0 3px 6px -3px #BBB;
+  -webkit-box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+          box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
 }
 
 .noUi-handle:after,
@@ -1403,11 +1403,11 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-transition-property: height,-webkit-transform;
-  transition-property: height,-webkit-transform;
-  -o-transition-property: transform,height;
-  transition-property: transform,height;
-  transition-property: transform,height,-webkit-transform;
+  -webkit-transition-property: height, -webkit-transform;
+  transition-property: height, -webkit-transform;
+  -o-transition-property: transform, height;
+  transition-property: transform, height;
+  transition-property: transform, height, -webkit-transform;
 }
 
 .swiper-container-3d {
@@ -1516,7 +1516,7 @@
 
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
-  opacity: .35;
+  opacity: 0.35;
   cursor: auto;
   pointer-events: none;
 }
@@ -1540,7 +1540,7 @@
 
 .swiper-button-prev:after,
 .swiper-container-rtl .swiper-button-next:after {
-  content: 'prev';
+  content: "prev";
 }
 
 .swiper-button-next,
@@ -1551,7 +1551,7 @@
 
 .swiper-button-next:after,
 .swiper-container-rtl .swiper-button-prev:after {
-  content: 'next';
+  content: "next";
 }
 
 .swiper-button-next.swiper-button-white,
@@ -1571,9 +1571,9 @@
 .swiper-pagination {
   position: absolute;
   text-align: center;
-  -webkit-transition: .3s opacity;
-  -o-transition: .3s opacity;
-  transition: .3s opacity;
+  -webkit-transition: 0.3s opacity;
+  -o-transition: 0.3s opacity;
+  transition: 0.3s opacity;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   z-index: 10;
@@ -1645,7 +1645,7 @@
   display: inline-block;
   border-radius: 50%;
   background: #000;
-  opacity: .2;
+  opacity: 0.2;
 }
 
 button.swiper-pagination-bullet {
@@ -1690,9 +1690,11 @@ button.swiper-pagination-bullet {
 
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
-  -webkit-transition: .2s transform,.2s top;
-  -o-transition: .2s transform,.2s top;
-  transition: .2s transform,.2s top;
+  -webkit-transition: 0.2s top, 0.2s -webkit-transform;
+  transition: 0.2s top, 0.2s -webkit-transform;
+  -o-transition: 0.2s transform, 0.2s top;
+  transition: 0.2s transform, 0.2s top;
+  transition: 0.2s transform, 0.2s top, 0.2s -webkit-transform;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -1708,15 +1710,19 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transition: .2s transform,.2s left;
-  -o-transition: .2s transform,.2s left;
-  transition: .2s transform,.2s left;
+  -webkit-transition: 0.2s left, 0.2s -webkit-transform;
+  transition: 0.2s left, 0.2s -webkit-transform;
+  -o-transition: 0.2s transform, 0.2s left;
+  transition: 0.2s transform, 0.2s left;
+  transition: 0.2s transform, 0.2s left, 0.2s -webkit-transform;
 }
 
 .swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transition: .2s transform,.2s right;
-  -o-transition: .2s transform,.2s right;
-  transition: .2s transform,.2s right;
+  -webkit-transition: 0.2s right, 0.2s -webkit-transform;
+  transition: 0.2s right, 0.2s -webkit-transform;
+  -o-transition: 0.2s transform, 0.2s right;
+  transition: 0.2s transform, 0.2s right;
+  transition: 0.2s transform, 0.2s right, 0.2s -webkit-transform;
 }
 
 .swiper-pagination-progressbar {
@@ -1973,12 +1979,12 @@ button.swiper-pagination-bullet {
   bottom: 0px;
   width: 100%;
   height: 100%;
-  opacity: .6;
+  opacity: 0.6;
   z-index: 0;
 }
 
 .swiper-container-cube .swiper-cube-shadow:before {
-  content: '';
+  content: "";
   background: #000;
   position: absolute;
   left: 0;
