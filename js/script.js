@@ -202,15 +202,15 @@ if (document.querySelector('.menu-body__btns')) {
       menuBtn.addEventListener('click', (e) => {
          getCurrentCount = menuBtn.previousElementSibling;
          if (e.target.closest('.menu-body__btn')) {
-            getIdBtn = e.target.id;
-            if (getIdBtn === 'minus') {
+            getAttrBtn = e.target.dataset.id;
+            if (getAttrBtn === 'minus') {
                let number = +getCurrentCount.innerHTML;
                if (number > 0) {
                   let resultMinus = number - 1;
                   let string = String(resultMinus);
                   getCurrentCount.innerHTML = string;
                }
-            } else if (getIdBtn === 'plus') {
+            } else if (getAttrBtn === 'plus') {
                let number = +getCurrentCount.innerHTML;
                if (number < 999) {
                   let resultMinus = number + 1;
