@@ -4,7 +4,7 @@
 * CSS Grid Layout
 * CSS @Keyframes Animations
 * JavaScript
-* GSAP (GreenSock Animation Platform)
+* MixItUp (Сортировка и фильтрация элементов)
 * BEM methodology
 * Responsive, partially elastic and cross-browser layout.
 
