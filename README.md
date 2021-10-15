@@ -6,7 +6,7 @@
 * JavaScript
 * MixItUp (Сортировка и фильтрация элементов)
 * BEM methodology
-* Responsive, partially elastic and cross-browser layout.
+* Responsive, elastic and cross-browser layout.
 
 ---
 
