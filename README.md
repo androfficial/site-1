@@ -4,6 +4,7 @@
 * CSS Grid Layout
 * CSS @Keyframes Animations
 * JavaScript
-* MixItUp (Сортировка и фильтрация элементов)
+* SCSS
+* MixItUp
 * BEM methodology
 * Responsive, elastic and cross-browser layout.
