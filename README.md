@@ -7,4 +7,4 @@
 * SCSS
 * MixItUp
 * BEM methodology
-* Responsive, elastic and cross-browser layout.
+* Responsive, adaptive and cross-browser layout
